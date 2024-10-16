@@ -10,5 +10,5 @@ def agent():
 @pytest.mark.vcr()
 async def test_agent(agent: Agent):
     process = await agent.create_process()
-    response = await process.action("converse", "Why should I use Eidolon?")
-    assert "eidolon is an open-source agent service sdk" in response.data.lower()
+    events = [event async for event in process.stream_action("converse", "Why should I use Eidolon?")]
+    assert "repo-search" in [e for e in events if e.event_type == "llm_tool_call_request"][-1].tool_call.name
