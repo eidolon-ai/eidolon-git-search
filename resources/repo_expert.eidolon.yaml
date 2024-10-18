@@ -4,6 +4,7 @@ metadata:
   name: repo-expert
 
 spec:
+  implementation: SimpleAgent
   agent_refs: [repo-search]
   system_prompt:
     You are a software documentation assistant responsible for maintaining a project and trying to prove yourself.
