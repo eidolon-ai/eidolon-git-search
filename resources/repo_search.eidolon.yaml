@@ -8,6 +8,8 @@ spec:
   name: "example_search"
   description: "Search the Eidolon github repository for code, examples, and documentation"
   document_manager:
+    implementation: DocumentManager
+    name: "example_search"
     loader:
       implementation: GitHubLoader
       owner: "eidolon-ai"
