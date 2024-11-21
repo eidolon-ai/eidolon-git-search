@@ -11,12 +11,9 @@ spec:
     implementation: DocumentManager
     name: "example_search"
     loader:
-      implementation: GitHubLoader
-      owner: "eidolon-ai"
-      repo: "eidolon"
+      implementation: GitLoader
+      url: "https://github.com/eidolon-ai/eidolon.git"
       pattern:
-        - "examples/**/getting_started/**/*.yaml"
-        - "examples/**/git_search/**/*.yaml"
         - "**/*.md"
         - "**/*.py"
       exclude: "**/test/**/*"
