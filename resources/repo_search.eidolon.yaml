@@ -11,7 +11,7 @@ spec:
     implementation: DocumentManager
     name: "example_search"
     loader:
-      implementation: GitHubLoaderV2
+      implementation: GitLoader
       url: "https://github.com/eidolon-ai/eidolon.git"
       pattern:
         - "**/*.md"
